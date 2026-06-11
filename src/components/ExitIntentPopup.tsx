@@ -1,0 +1,87 @@
+import { useEffect, useState } from "react";
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogAction,
+  AlertDialogCancel,
+} from "@/components/ui/alert-dialog";
+
+const SESSION_KEY = "coffee_event_shown";
+
+const ExitIntentPopup = () => {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!sessionStorage.getItem(SESSION_KEY)) {
+      const handleScroll = () => {
+        const scrolled = window.scrollY;
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        
+        // 50% 스크롤 시 팝업 띄우기
+        if (totalHeight > 0 && scrolled / totalHeight >= 0.5) {
+          sessionStorage.setItem(SESSION_KEY, "true");
+          setOpen(true);
+          window.removeEventListener("scroll", handleScroll);
+        }
+      };
+
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleOpenPromoPopup = () => setOpen(true);
+    window.addEventListener("open-promo-popup", handleOpenPromoPopup);
+    return () => window.removeEventListener("open-promo-popup", handleOpenPromoPopup);
+  }, []);
+
+  const handleRegister = () => {
+    setOpen(false);
+    const ctaSection = document.getElementById("cta");
+    if (ctaSection) {
+      ctaSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <AlertDialog open={open} onOpenChange={setOpen}>
+      <AlertDialogContent className="max-w-sm rounded-3xl border-none bg-gradient-to-b from-card to-secondary p-8 glass-card">
+        <AlertDialogHeader className="space-y-2">
+          <AlertDialogTitle className="text-2xl font-black leading-tight text-foreground text-center">
+            🎁 파트너 신청 이벤트
+          </AlertDialogTitle>
+          <AlertDialogDescription className="text-base leading-relaxed text-muted-foreground text-center flex flex-col items-center justify-center pt-2">
+            <img src="/커피 기프티콘과 아이스 아메리카노.png" alt="스타벅스 커피 기프티콘 증정" className="w-full max-w-[240px] rounded-2xl mb-6 shadow-sm object-contain" />
+            <span className="font-semibold text-foreground mb-4">
+              지금 파트너 등록을 완료하면<br />추첨을 통해 스타벅스 커피 쿠폰을 드립니다.
+            </span>
+            <span>
+              매출도 올리고<br />시원한 커피도 받아가세요!
+            </span>
+            <span className="text-sm font-bold text-primary mt-4 bg-primary/10 px-3 py-1 rounded-full">
+              (1분 등록)
+            </span>
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter className="mt-4 flex-col gap-2 sm:flex-col items-center w-full">
+          <AlertDialogAction
+            onClick={handleRegister}
+            className="w-full rounded-2xl bg-gradient-accent py-6 text-lg font-bold text-accent-foreground hover:scale-[1.02] shadow-kello-glow transition-transform"
+          >
+            파트너 신청하기
+          </AlertDialogAction>
+          <AlertDialogCancel className="w-full border-none bg-transparent mt-2 text-sm font-medium text-muted-foreground hover:bg-transparent hover:text-foreground">
+            닫기
+          </AlertDialogCancel>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  );
+};
+
+export default ExitIntentPopup;

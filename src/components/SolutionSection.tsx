@@ -1,0 +1,71 @@
+import { motion } from "framer-motion";
+import { Languages, Smartphone, Globe2, TrendingUp } from "lucide-react";
+import KelloText from "./KelloText";
+import ScrollReveal from "./ScrollReveal";
+
+const solutions = [
+  {
+    icon: Languages,
+    title: "다국어 예약 시스템",
+    desc: "모든 예약과 소통이 자동 번역되어 외국어 스트레스 제로",
+    gradient: "from-kello-green to-primary",
+  },
+  {
+    icon: Smartphone,
+    title: "외국인 친화 UX",
+    desc: "외국인에게 최적화된 예약 환경으로 이탈률 방지",
+    gradient: "from-kello-coral to-accent",
+  },
+  {
+    icon: Globe2,
+    title: "관광객 대상 플랫폼 노출",
+    desc: "한국 방문 예정인 관광객에게 다이렉트 매장 홍보",
+    gradient: "from-kello-gold to-accent",
+  },
+  {
+    icon: TrendingUp,
+    title: "예약 → 방문 → 매출 연결",
+    desc: "노쇼 없는 100% 선결제로 확실한 방문과 매출 보장",
+    gradient: "from-primary to-accent",
+  },
+];
+
+const SolutionSection = () => {
+  return (
+<section className="py-24 bg-spring-peach relative overflow-hidden">
+      <div className="absolute inset-0 opacity-40" style={{ backgroundImage: "radial-gradient(circle at 20% 80%, hsl(var(--primary) / 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, hsl(var(--accent) / 0.1) 0%, transparent 50%)" }} />
+      <div className="absolute top-0 right-1/4 w-80 h-80 bg-kello-gold/10 rounded-full blur-3xl -translate-y-1/2" />
+      <div className="container mx-auto px-6 relative z-10">
+        <ScrollReveal width="100%">
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <span className="inline-block text-sm font-semibold text-primary tracking-widest uppercase mb-4">Solution</span>
+            <h2 className="text-[20px] sm:text-3xl md:text-5xl font-extrabold text-foreground mb-4 break-keep">
+              <KelloText />가 외국인 고객과 <br className="sm:hidden" /> 사장님을 연결해드립니다.
+            </h2>
+            <p className="text-lg sm:text-xl md:text-2xl font-bold text-primary/80 leading-tight tracking-tight break-keep pt-2">
+              "노쇼 없는 100% 선결제로<br className="sm:hidden" /> 확실한 방문과 매출 보장"
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch">
+          {solutions.map((s, i) => (
+            <ScrollReveal key={s.title} delay={i * 0.15} className="flex h-full w-full">
+              <div className="flex-1 w-full glass-card rounded-[2.5rem] p-8 hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center group min-h-[280px] shadow-sm">
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${s.gradient} mb-6 shadow-md group-hover:scale-110 transition-transform`}>
+                  <s.icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-black text-foreground mb-4 break-keep tracking-tight">{s.title}</h3>
+                <p className="text-sm sm:text-base text-muted-foreground font-bold leading-relaxed break-keep">
+                  {s.desc}
+                </p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default SolutionSection;

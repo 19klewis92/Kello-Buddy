@@ -1,0 +1,16 @@
+
+> vite_react_shadcn_ts@0.0.0 lint
+> eslint .
+
+
+C:\Users\USER\Desktop\kello-buddy\src\components\CTAFormSection.tsx
+  82:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\USER\Desktop\kello-buddy\src\components\Header.tsx
+  6:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\USER\Desktop\kello-buddy\src\components\SurveyDialog.tsx
+  199:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+✖ 3 problems (3 errors, 0 warnings)
+

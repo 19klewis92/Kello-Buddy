@@ -11,7 +11,7 @@ const TermsOfService = () => {
       <section>
         <h3 className="font-semibold text-base text-foreground mb-2">제1조 (목적)</h3>
         <p>
-          본 약관은 (주)HSP(이하 "회사")가 제공하는 켈로(Kello) 서비스(이하 "서비스")의 이용과 관련하여, 회사와 이용자의 권리, 의무 및 제반 책임사항을 규정함을 목적으로 합니다.
+          본 약관은 (주)HxP(이하 "회사")가 제공하는 Kello 서비스(이하 "서비스")의 이용과 관련하여, 회사와 이용자의 권리, 의무 및 제반 책임사항을 규정함을 목적으로 합니다.
         </p>
       </section>
 
@@ -84,10 +84,10 @@ const TermsOfService = () => {
           서비스에 대한 모든 제휴 및 문의사항은 아래의 메일로 접수하실 수 있습니다.
         </p>
         <div className="mt-4 text-sm bg-muted/40 p-5 rounded-xl border border-border/50">
-          <p className="font-medium text-foreground mb-1">회사명: (주)HSP</p>
-          <p className="font-medium text-foreground mb-1">서비스명: 켈로</p>
-          <p className="font-medium text-foreground mb-4">대표자명: 정다영</p>
-          {/* <p className="mb-1">사업자등록번호: (추후 기재)</p> */}
+          <p className="font-medium text-foreground mb-1">회사명: (주)HxP</p>
+          <p className="font-medium text-foreground mb-1">서비스명: Kello</p>
+          <p className="font-medium text-foreground mb-1">대표자명: 김한수</p>
+          <p className="font-medium text-foreground mb-4">사업자등록번호: 162-48-01099</p>
           {/* <p className="mb-1">전화번호: (추후 기재)</p> */}
           {/* <p className="mb-1">주소: (추후 기재)</p> */}
           <p className="font-medium text-foreground text-primary">이메일: hot6pent@gmail.com</p>

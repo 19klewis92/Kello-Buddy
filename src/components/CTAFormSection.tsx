@@ -204,7 +204,7 @@ const CTAFormSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting || !isSupabaseConfigured}
-                className="w-full bg-gradient-accent text-accent-foreground font-black py-4 sm:py-5 rounded-2xl text-lg sm:text-xl shadow-kello-glow hover:scale-[1.02] transition-transform flex items-center justify-center gap-2 mt-4 disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-accent text-amber-950 font-black py-4 sm:py-5 rounded-2xl text-lg sm:text-xl shadow-kello-glow border border-[#E2D6C5]/60 hover:scale-[1.02] transition-transform flex items-center justify-center gap-2 mt-4 disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <Loader2 className="h-5 w-5 sm:h-6 sm:w-6 animate-spin" />

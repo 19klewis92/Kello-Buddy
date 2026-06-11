@@ -10,10 +10,8 @@ import SocialProofSection from "@/components/SocialProofSection";
 import CTAFormSection from "@/components/CTAFormSection";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
-import ExitIntentPopup from "@/components/ExitIntentPopup";
 import Header from "@/components/Header";
 import CherryBlossoms from "@/components/CherryBlossoms";
-import FloatingPromo from "@/components/FloatingPromo";
 import KBeautyTrendSection from "@/components/KBeautyTrendSection";
 import EarlyBirdSection from "@/components/EarlyBirdSection";
 import AppPreviewSection from "@/components/AppPreviewSection";
@@ -23,7 +21,6 @@ const Index = () => {
     <div className="min-h-screen font-sans overflow-x-hidden">
       <CherryBlossoms />
       <Header />
-      <FloatingPromo />
       <HeroSection />
       <KBeautyTrendSection />
       <div>
@@ -55,7 +52,6 @@ const Index = () => {
       </div>
       <Footer />
       <FloatingContact />
-      <ExitIntentPopup />
     </div>
   );
 };

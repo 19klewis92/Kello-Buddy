@@ -121,10 +121,10 @@ const Footer = () => {
               </p>
 
               <div className="text-foreground/60 text-sm flex flex-col gap-2 mb-8">
-                <p>회사명 : (주)HSP</p>
-                <p>서비스명 : 켈로</p>
-                <p>대표 : 정다영</p>
-                <p>사업자등록번호 : 323-02-02088</p>
+                <p>회사명 : (주)HxP</p>
+                <p>서비스명 : Kello</p>
+                <p>대표 : 김한수</p>
+                <p>사업자등록번호 : 162-48-01099</p>
                 {/* <p>주소 : 서울특별시 강남구 ... (추후 추가 시 주석 해제)</p> */}
               </div>
 

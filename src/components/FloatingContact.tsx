@@ -18,11 +18,11 @@ const FloatingContact = () => {
             <h4 className="font-bold text-foreground text-sm mb-3">문의하기</h4>
             <div className="space-y-3">
               <a
-                href="mailto:hot6pent@gmail.com"
+                href="mailto:hotsix6.kello@gmail.com"
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="h-4 w-4 shrink-0" />
-                hot6pent@gmail.com
+                hotsix6.kello@gmail.com
               </a>
             </div>
             <p className="text-xs text-muted-foreground mt-4 leading-relaxed bg-primary/5 p-3 rounded-xl text-center">

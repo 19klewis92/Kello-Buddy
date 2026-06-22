@@ -17,15 +17,15 @@ const FOOTER_MENUS = [
     links: [
       { name: "이용약관", href: "#", isDialog: true, dialogComponent: <TermsOfService />, dialogTitle: "이용약관" },
       { name: "개인정보처리방침", href: "#", isDialog: true, dialogImages: Array.from({length: 51}).map((_, i) => `/privacy_images/77d21b95-${String(i + 1).padStart(2, '0')}.png`), dialogTitle: "개인정보처리방침" },
-      { name: "파트너센터", href: "https://partner.wekello.com/", image: "/oz_logo.png", text: "오즈코딩스쿨" },
+      { name: "파트너센터", href: "https://partner.wekello.com/", image: "/oz_logo.png", text: "오즈코딩스쿨 & 넥스트러너스" },
     ],
   },
   {
     title: "고객지원",
     links: [
-      { name: "인스타 DM 문의 (kello_partners)", href: "https://www.instagram.com/kello_partners/?hl=ko" },
+      { name: "인스타 DM 문의 (hotsix6.kello)", href: "https://www.instagram.com/hotsix6.kello/" },
       { name: "자주 묻는 질문", href: "/#faq" },
-      { name: "이메일 문의 (hot6pent@gmail.com)", href: "mailto:hot6pent@gmail.com" },
+      { name: "이메일 문의 (hotsix6.kello@gmail.com)", href: "mailto:hotsix6.kello@gmail.com" },
     ],
   },
 ];

@@ -42,10 +42,7 @@ const ExitIntentPopup = () => {
 
   const handleRegister = () => {
     setOpen(false);
-    const ctaSection = document.getElementById("cta");
-    if (ctaSection) {
-      ctaSection.scrollIntoView({ behavior: "smooth" });
-    }
+    window.location.href = "https://partner.wekello.com/";
   };
 
   return (

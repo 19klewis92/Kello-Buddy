@@ -52,12 +52,12 @@ const Header = () => {
                     <button onClick={() => scrollToSection('service')} className="text-sm font-semibold text-foreground/80 hover:text-primary transition-colors">서비스소개</button>
                     <button onClick={() => scrollToSection('benefits')} className="text-sm font-semibold text-foreground/80 hover:text-primary transition-colors">파트너 혜택</button>
                     <button onClick={() => scrollToSection('faq')} className="text-sm font-semibold text-foreground/80 hover:text-primary transition-colors">FAQ</button>
-                    <button 
-                        onClick={() => scrollToSection('apply')} 
+                    <a 
+                        href="https://partner.wekello.com/"
                         className="text-sm font-bold bg-primary text-primary-foreground px-4 py-2 rounded-full hover:bg-primary/90 transition-colors shadow-sm"
                     >
                         파트너 신청하기
-                    </button>
+                    </a>
                 </nav>
 
                 {/* Mobile Menu Toggle Button */}
@@ -89,12 +89,12 @@ const Header = () => {
                         </div>
 
                         {/* Compact Button */}
-                        <button 
-                            onClick={() => scrollToSection('apply')} 
-                            className="text-center text-[13px] font-bold bg-primary text-primary-foreground px-3 py-2.5 rounded-lg hover:bg-primary/90 transition-all shadow-sm active:scale-95 mt-1"
+                        <a 
+                            href="https://partner.wekello.com/"
+                            className="text-center text-[13px] font-bold bg-primary text-primary-foreground px-3 py-2.5 rounded-lg hover:bg-primary/90 transition-all shadow-sm active:scale-95 mt-1 block"
                         >
                             파트너 신청하기
-                        </button>
+                        </a>
                     </div>
                     {/* Background overlay to close */}
                     <div className="absolute inset-0 -z-10" onClick={() => setIsMobileMenuOpen(false)} />

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Globe, Phone, TicketPercent, CheckCircle2 } from "lucide-react";
+import { Globe, Sparkles, TicketPercent, CheckCircle2 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import KelloText from "./KelloText";
 import ScrollReveal from "./ScrollReveal";
@@ -56,13 +56,13 @@ const HeroSection = () => {
             </ScrollReveal>
 
             <ScrollReveal delay={0.8}>
-              <button
-                onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}
-                className="inline-flex items-center gap-2 bg-gradient-accent text-amber-950 font-bold px-5 py-3.5 sm:px-6 sm:py-4 md:px-8 md:py-5 rounded-full text-base md:text-xl shadow-kello-glow border border-[#E2D6C5]/60 hover:scale-105 transition-transform relative z-10 w-full sm:w-auto justify-center"
+              <a
+                href="https://partner.wekello.com/"
+                className="inline-flex items-center gap-2 bg-rose-400 hover:bg-rose-500 text-white font-bold px-5 py-3.5 sm:px-6 sm:py-4 md:px-8 md:py-5 rounded-full text-base md:text-xl shadow-[0_8px_30px_rgba(251,113,133,0.3)] hover:scale-105 transition-all relative z-10 w-full sm:w-auto justify-center"
               >
-                <Phone className="h-5 w-5 md:h-6 md:w-6" />
+                <Sparkles className="h-5 w-5 md:h-6 md:w-6" />
                 외국인 고객 받고 매출 올리기
-              </button>
+              </a>
             </ScrollReveal>
 
             <ScrollReveal delay={1.0}>

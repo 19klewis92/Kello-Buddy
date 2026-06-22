@@ -7,14 +7,13 @@ import RevenueGraphSection from "@/components/RevenueGraphSection";
 import FAQSection from "@/components/FAQSection";
 import SocialProofSection from "@/components/SocialProofSection";
 
-import CTAFormSection from "@/components/CTAFormSection";
 import Footer from "@/components/Footer";
-import FloatingContact from "@/components/FloatingContact";
 import Header from "@/components/Header";
 import CherryBlossoms from "@/components/CherryBlossoms";
 import KBeautyTrendSection from "@/components/KBeautyTrendSection";
 import EarlyBirdSection from "@/components/EarlyBirdSection";
 import AppPreviewSection from "@/components/AppPreviewSection";
+import { Sparkles } from "lucide-react";
 
 const Index = () => {
   return (
@@ -47,11 +46,18 @@ const Index = () => {
         <FAQSection />
       </div>
 
-      <div id="apply">
-        <CTAFormSection />
-      </div>
       <Footer />
-      <FloatingContact />
+
+      {/* 하단 중앙 고정 플로팅 버튼 */}
+      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-sm sm:max-w-md px-4">
+        <a
+          href="https://partner.wekello.com/"
+          className="flex items-center justify-center gap-2 w-full bg-rose-400 hover:bg-rose-500 text-white font-bold py-3.5 sm:py-4 px-6 rounded-full shadow-[0_8px_30px_rgba(251,113,133,0.3)] transition-all hover:scale-105 active:scale-95 text-sm sm:text-base md:text-lg border border-rose-300/20"
+        >
+          <Sparkles className="h-4 w-4 sm:h-5 sm:w-5" />
+          외국인 고객 받고 매출 올리기
+        </a>
+      </div>
     </div>
   );
 };

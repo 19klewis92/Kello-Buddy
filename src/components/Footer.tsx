@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Activity } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -99,8 +99,10 @@ const FooterMenuSection = ({ menu }: { menu: typeof FOOTER_MENUS[0] }) => {
                   <div className="flex items-center gap-2 flex-wrap mt-1">
                     {link.partners.map((partner, pIdx) => (
                       <div key={pIdx} className="flex items-center gap-1.5 opacity-90 border border-border/50 rounded-md p-1.5 px-2">
-                        {partner.image && (
+                        {partner.image ? (
                           <img src={partner.image} alt={partner.name} className="h-4 object-contain" />
+                        ) : (
+                          <Activity className="h-3.5 w-3.5 text-[#fb7185] shrink-0" />
                         )}
                         <span className="text-xs font-semibold text-foreground/70">{partner.name}</span>
                       </div>

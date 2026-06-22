@@ -90,7 +90,7 @@ const TermsOfService = () => {
           <p className="font-medium text-foreground mb-4">사업자등록번호: 162-48-01099</p>
           {/* <p className="mb-1">전화번호: (추후 기재)</p> */}
           {/* <p className="mb-1">주소: (추후 기재)</p> */}
-          <p className="font-medium text-foreground text-primary">이메일: hotsix6.kello@gmail.com</p>
+          <p className="font-medium text-foreground text-primary">이메일: hot6pent@gmail.com</p>
         </div>
       </section>
     </div>

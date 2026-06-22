@@ -18,7 +18,9 @@ const FloatingContact = () => {
             <h4 className="font-bold text-foreground text-sm mb-3">문의하기</h4>
             <div className="space-y-3">
               <a
-                href="mailto:hotsix6.kello@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=hotsix6.kello@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="h-4 w-4 shrink-0" />

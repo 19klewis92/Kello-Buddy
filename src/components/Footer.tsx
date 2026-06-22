@@ -17,15 +17,22 @@ const FOOTER_MENUS = [
     links: [
       { name: "이용약관", href: "#", isDialog: true, dialogComponent: <TermsOfService />, dialogTitle: "이용약관" },
       { name: "개인정보처리방침", href: "#", isDialog: true, dialogImages: Array.from({length: 51}).map((_, i) => `/privacy_images/77d21b95-${String(i + 1).padStart(2, '0')}.png`), dialogTitle: "개인정보처리방침" },
-      { name: "파트너센터", href: "https://partner.wekello.com/", image: "/oz_logo.png", text: "오즈코딩스쿨 & 넥스트러너스" },
+      { 
+        name: "파트너센터", 
+        href: "https://partner.wekello.com/", 
+        partners: [
+          { name: "오즈코딩스쿨", image: "/oz_logo.png" },
+          { name: "넥스트러너스" }
+        ]
+      },
     ],
   },
   {
     title: "고객지원",
     links: [
-      { name: "인스타 DM 문의 (hotsix6.kello)", href: "https://www.instagram.com/hotsix6.kello/" },
       { name: "자주 묻는 질문", href: "/#faq" },
-      { name: "이메일 문의 (hotsix6.kello@gmail.com)", href: "mailto:hotsix6.kello@gmail.com" },
+      { name: "인스타 DM 문의 (hotsix6.kello)", href: "https://www.instagram.com/hotsix6.kello/" },
+      { name: "이메일 문의 (hotsix6.kello@gmail.com)", href: "https://mail.google.com/mail/?view=cm&fs=1&to=hotsix6.kello@gmail.com" },
     ],
   },
 ];
@@ -55,7 +62,7 @@ const FooterMenuSection = ({ menu }: { menu: typeof FOOTER_MENUS[0] }) => {
         }`}
       >
         <ul className="flex flex-col gap-3 flex-wrap">
-          {menu.links.map((link: { name: string; href?: string; isDialog?: boolean; dialogComponent?: React.ReactNode; dialogTitle?: string; dialogImages?: string[]; dialogImage?: string; image?: string; text?: string; }, idx) => (
+          {menu.links.map((link: { name: string; href?: string; isDialog?: boolean; dialogComponent?: React.ReactNode; dialogTitle?: string; dialogImages?: string[]; dialogImage?: string; image?: string; text?: string; partners?: { name: string; image?: string }[] }, idx) => (
             <li key={idx}>
               <div className="flex flex-col gap-2 items-start">
                 {link.isDialog ? (
@@ -88,10 +95,16 @@ const FooterMenuSection = ({ menu }: { menu: typeof FOOTER_MENUS[0] }) => {
                     {link.name}
                   </a>
                 )}
-                {link.image && (
-                  <div className="flex items-center gap-2 opacity-90 border border-border/50 rounded-md p-1.5 px-2 mt-1">
-                    <img src={link.image} alt={link.text} className="h-4 object-contain" />
-                    <span className="text-xs font-semibold text-foreground/70">{link.text}</span>
+                {link.partners && (
+                  <div className="flex items-center gap-2 flex-wrap mt-1">
+                    {link.partners.map((partner, pIdx) => (
+                      <div key={pIdx} className="flex items-center gap-1.5 opacity-90 border border-border/50 rounded-md p-1.5 px-2">
+                        {partner.image && (
+                          <img src={partner.image} alt={partner.name} className="h-4 object-contain" />
+                        )}
+                        <span className="text-xs font-semibold text-foreground/70">{partner.name}</span>
+                      </div>
+                    ))}
                   </div>
                 )}
               </div>
